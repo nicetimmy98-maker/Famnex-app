@@ -1,0 +1,23 @@
+name: Release repository guard
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  reject-private-materials:
+    name: Reject installers and secrets in Git
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject binaries, keystores, and Tuya credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-files | grep -E -i '\.(apk|aab|ipa|keystore|jks|aar)$|(^|/)tuya\.properties$'; then
+            echo 'Put installers in GitHub Releases. Do not commit installers, keystores, or Tuya credentials.' >&2
+            exit 1
+          fi
