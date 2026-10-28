@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "platform": "android",
+  "channel": "test",
+  "version": "1.5.5",
+  "build": 35,
+  "fullVersion": "1.5.5.35",
+  "minSupportedBuild": 17,
+  "mandatory": false,
+  "downloadUrl": "https://github.com/nicetimmy98-maker/Famnex-app/releases/latest/download/FAMNEX-android.apk",
+  "sha256": "ecde18d31edfa7869ff26550fa61a77880be920c6ad6866c2b893d4b8719acea",
+  "releaseNotes": [
+    "内部测试 release 1.5.5，业务接口仍是测试环境 api-test.famnex.vip。",
+    "这支 release 包的检查更新改为公开仓库的固定下载地址。",
+    "相对已发布的 1.5.4（34），没有新增业务功能。",
+    "安装后覆盖 com.famnex.app，并保留应用数据。",
+    "视频通话和机器人设置仍待真机验收。",
+    "构建来自私有仓库提交 13583dab1c74。"
+  ],
+  "publishedAt": "2026-10-28T17:00:15.739821+00:00"
+}
